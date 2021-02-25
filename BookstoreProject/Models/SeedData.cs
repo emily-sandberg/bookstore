@@ -33,7 +33,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        NumPages = 1488
                     },
 
 
@@ -47,7 +48,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58,
+                        NumPages = 944
                     },
 
                     new Book
@@ -59,7 +61,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        NumPages = 832
                     },
 
                     new Book
@@ -72,7 +75,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61,
+                        NumPages = 864
                     },
 
                     new Book
@@ -84,7 +88,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33,
+                        NumPages = 528
                     },
 
                     new Book
@@ -96,7 +101,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        NumPages = 288
                     },
 
                     new Book
@@ -108,7 +114,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99,
+                        NumPages = 304
                     },
 
                     new Book
@@ -120,7 +127,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66,
+                        NumPages = 240
                     },
 
                     new Book
@@ -132,7 +140,8 @@ namespace BookstoreProject.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16,
+                        NumPages = 400
                     },
 
                     new Book
@@ -144,7 +153,47 @@ namespace BookstoreProject.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03,
+                        NumPages = 642
+                    },
+
+                    new Book
+                    {
+                        Title = "A Thousand Splendid Suns",
+                        AuthorFirstName = "Khaled",
+                        AuthorLastName = "Hosseini",
+                        Publisher = "Riverhead Books",
+                        ISBN = "978-0739489505",
+                        Classification = "Fiction",
+                        Category = "Historical",
+                        Price = 10.44,
+                        NumPages = 432
+                    },
+
+                    new Book
+                    {
+                        Title = "A Gentleman in Moscow",
+                        AuthorFirstName = "Amor",
+                        AuthorLastName = "Towles",
+                        Publisher = "Penguin Books",
+                        ISBN = "978-0670026197",
+                        Classification = "Fiction",
+                        Category = "Historical",
+                        Price = 16.59,
+                        NumPages = 466
+                    },
+
+                    new Book
+                    {
+                        Title = "Eleanor Oliphant is Completely Fine",
+                        AuthorFirstName = "Gail",
+                        AuthorLastName = "Honeyman",
+                        Publisher = "Penguin Books",
+                        ISBN = "978-0525506348",
+                        Classification = "Fiction",
+                        Category = "Psychological",
+                        Price = 8.99,
+                        NumPages = 416
                     }
 
                 );
