@@ -5,26 +5,13 @@
 @model BookListViewModel
 
 
-<!--Loop through each book and display information-->
+<!--Loop through each book from BookListViewModel and display information-->
 @foreach (var x in Model.Books)
 {
-    <div class="card card-outline-primary m-1 p-1 card bg-light mb-3">
-        <br />
-        <h4>
-            @x.Title
-        </h4>
-        <div class="text-muted">
-            <p>Author: @x.AuthorFirstName @x.AuthorMiddleName @x.AuthorLastName</p>
-            <p>Publisher: @x.Publisher</p>
-            <p>ISBN: @x.ISBN</p>
-            <p>Page Count: @x.NumPages</p>
-            <p>Price: $@x.Price</p>
-            <span class="badge badge-pill badge-info" style="float:right">
-                <p>@x.Classification, @x.Category</p>
-            </span>
-        </div>
-        <br />
-    </div>
+    <partial name="BookSummary" model="x" />
 }
 
-<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
+<!-- Builds page navigation menu at bottom -->
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+     class="btn-group pull-right m-1"></div>
