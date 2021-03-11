@@ -14,13 +14,14 @@ namespace BookstoreProject.Models
         {
             BookstoreDbContext context = application.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<BookstoreDbContext>();
 
+            // check to see if there are any migrations that need to happen yet
             if(context.Database.GetPendingMigrations().Any())
             {
-                context.Database.Migrate();
+                context.Database.Migrate(); //if so, migrate them
             }
 
-            // Add these books if context doesn't have any
-            if(!context.Books.Any())
+            // Add these books if context doesn't have any books
+            if(!context.Books.Any()) 
             {
                 context.Books.AddRange(
 

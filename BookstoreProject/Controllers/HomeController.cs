@@ -24,19 +24,19 @@ namespace BookstoreProject.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index(string category, int page = 1) //if nothing's passed in, put a 1 in there
+        public IActionResult Index(string category, int pageNum = 1) //if nothing's passed in, put a 1 in there
         {
             //breaks our items out into the number of pages that we want
             return View(new BookListViewModel
             {
                 Books = _repository.Books
                     .Where(b => category == null || b.Category == category)
-                    .OrderBy(b => b.BookId)
-                    .Skip((page - 1) * PageSize)
+                    .OrderBy(b => b.BookId) //query written using linq
+                    .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
                     TotalNumItems = category == null ? _repository.Books.Count() :
                         _repository.Books.Where (x => x.Category == category).Count()
